@@ -6,19 +6,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Registrarse"
+    tools:context=".RegisterActivity"
     android:background="@color/principal">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:indeterminate="true"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="347dp"
+        android:layout_height="166dp"
+        app:srcCompat="@drawable/justdoit"
+        android:layout_gravity="center"
+        android:layout_marginTop="130dp"/>
 
     <EditText
         android:id="@+id/txtName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textPersonName"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:layout_margin="10dp"/>
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="5dp"/>
 
     <EditText
         android:id="@+id/txtLastName"
@@ -29,7 +48,9 @@
         android:inputType="textPersonName"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:layout_margin="10dp"/>
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="3dp"/>
 
     <EditText
         android:id="@+id/txtEmail"
@@ -40,7 +61,9 @@
         android:inputType="textEmailAddress"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:layout_margin="10dp"/>
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="3dp"/>
 
 
     <EditText
@@ -52,12 +75,16 @@
         android:inputType="textPassword"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:layout_margin="10dp"/>
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="3dp"/>
 
     <Button
-        android:onClick="Crear"
+        android:onClick="register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Crear cuenta"
-        android:layout_margin="10dp"/>
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="3dp"/>
 </LinearLayout>

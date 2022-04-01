@@ -2,20 +2,17 @@ package com.example.trabajo
 
 import android.content.Intent
 import android.content.res.Configuration
-import android.graphics.drawable.GradientDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
-import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
-class SegundaActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var drawer: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
@@ -40,7 +37,7 @@ class SegundaActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
     }
     fun volver (view: View){
 
-        startActivity(Intent(this,PrimeraActivity::class.java))
+        startActivity(Intent(this,LoginActivity::class.java))
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

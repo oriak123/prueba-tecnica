@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Trabajo">
         <activity
-            android:name=".Registrarse"
+            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".ForgotPassActivity"
             android:exported="false" />
         <activity
-            android:name=".SegundaActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".PrimeraActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
