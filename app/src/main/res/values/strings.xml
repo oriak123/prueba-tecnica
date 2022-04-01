@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">trabajo</string>
+    <string name="correo_electronico">Correo electrónico</string>
+    <string name="iniciar_sesion">iniciar sesión</string>
+    <string name="contrasena">Contrasena</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="todo">TODO</string>
+    <string name="salir">Salir</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="image1">imagw1</string>
+    <string name="image2">TODO</string>
+    <string name="image3">image3</string>
+    <string name="image4">image4</string>
+</resources>
