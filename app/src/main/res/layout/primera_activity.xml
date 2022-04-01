@@ -8,7 +8,6 @@
     android:background="#3C3F4E"
     tools:context=".PrimeraActivity">
 
-
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
