@@ -55,6 +55,14 @@
         android:ems="10"
         android:inputType="textPassword"
         android:layout_margin="10dp"/>
+    <Button
+        android:onClick="sendPostRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iniciar sesión 2"
+        android:textStyle="bold"
+        android:background="@color/design_default_color_secondary"
+        android:layout_margin="10dp"/>
 
     <Button
         android:onClick="login"
