@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#84FFFF"
+    tools:context=".Product2">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="301dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:srcCompat="@drawable/robot2" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#E65100"
+        android:textStyle="bold"
+        android:text="ROBOT DIDACTICO OPENBOTV 6 DOF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="$5.800.000"
+        android:textColor="#E65100"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="394dp"
+        android:layout_height="132dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:text="El robot OPENBOTV es un robot bioinspirado totalmente didáctico y reconfigurable, gracias a su construcción modular permite desmontar y montar robots disponibles desde 1 hasta 6 grados de libertad. Este robot se puede controlar y programar desde el PC mediante entornos como MATLAB, LABVIEW, C++, JAVA, PYTHON, ROS; desde dispositivos móviles a través de Bluetooth o por dispositivos compatibles con puertos IR o USB,. Gracias a sus distintas características de control se puede aplicar en robótica industrial, biónica, inteligencia artificial."
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="197dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:srcCompat="@drawable/robot" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="127dp"
+        android:layout_height="193dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:srcCompat="@drawable/robot3" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="ROBOT WEMOS DIGISPARK PRO ATTINY167 USB"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#e65100"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#E65100"
+        android:textStyle="italic"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="$1.300.000"
+        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="273dp"
+        android:layout_height="131dp"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:layout_marginBottom="10dp"
+        android:text="Digispark es una placa de desarrollo derivaba de Arduino con conexión USB, esta placa es pequeña, económica, y 100% compatible con ARDUINO IDE. Por sus dimensiones es perfecta para desarrollos que requieran poco espacio, y pocos pines digitales."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:onClick="volverinicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

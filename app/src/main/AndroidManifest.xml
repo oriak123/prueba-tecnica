@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Trabajo">
         <activity
+            android:name=".QuejasyReclamos"
+            android:exported="false" />
+        <activity
+            android:name=".Product3"
+            android:exported="false" />
+        <activity
+            android:name=".Product2"
+            android:exported="false" />
+        <activity
+            android:name=".Product1"
+            android:exported="false" />
+        <activity
+            android:name=".Productos"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity

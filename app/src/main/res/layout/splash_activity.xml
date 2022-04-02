@@ -18,6 +18,14 @@
         android:visibility="gone"
         android:indeterminate="true"/>
 
+    <ImageButton
+        android:onClick="volverlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="330dp"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"

@@ -40,6 +40,10 @@ class RegisterActivity : AppCompatActivity() {
         dbReference=database.reference.child("User")
     }
 
+    fun volverlogin(view: View){
+        startActivity(Intent(this,LoginActivity()::class.java))
+    }
+
     fun register(view:View){
         createNewAccount()
 

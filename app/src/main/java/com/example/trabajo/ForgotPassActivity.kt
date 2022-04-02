@@ -25,6 +25,9 @@ class ForgotPassActivity : AppCompatActivity() {
         auth= FirebaseAuth.getInstance()
 
     }
+    fun volverlogin(view: View){
+        startActivity(Intent(this,LoginActivity()::class.java))
+    }
     fun send(view:View) {
         val email=txtEmail.text.toString()
 

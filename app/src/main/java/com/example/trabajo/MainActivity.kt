@@ -43,10 +43,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId){
-            R.id.nav_item_one -> Toast.makeText(this,"Inicio",Toast.LENGTH_SHORT).show()
-            R.id.nav_item_two -> Toast.makeText(this,"¿Quienes somos?",Toast.LENGTH_SHORT).show()
-            R.id.nav_item_three -> Toast.makeText(this,"Productos",Toast.LENGTH_SHORT).show()
-            R.id.nav_item_four -> Toast.makeText(this,"Quejas y reclamos",Toast.LENGTH_SHORT).show()
+            R.id.nav_item_one -> startActivity(Intent(this,MainActivity::class.java))
+            R.id.nav_item_two -> startActivity(Intent(this,Productos::class.java))
+            R.id.nav_item_three -> startActivity(Intent(this,QuejasyReclamos::class.java))
+            R.id.nav_item_four -> startActivity(Intent(this,LoginActivity::class.java))
+
         }
         drawer.closeDrawer(GravityCompat.START)
         return true
