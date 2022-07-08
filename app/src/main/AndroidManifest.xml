@@ -8,10 +8,18 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="App Legend"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Trabajo">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name=".DescriptionProduct"
+            android:exported="false" />
+        <activity
+            android:name=".ImageDetail"
+            android:exported="false"
+            android:label="@string/title_activity_image_detail"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".QuejasyReclamos"
             android:exported="false" />

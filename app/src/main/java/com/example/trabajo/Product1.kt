@@ -12,6 +12,6 @@ class Product1 : AppCompatActivity() {
     }
     fun volver_productos(view: View){
 
-        startActivity(Intent(this,Productos::class.java))
+        startActivity(Intent(this,MainActivity::class.java))
     }
 }

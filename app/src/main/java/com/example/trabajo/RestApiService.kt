@@ -1,21 +1,41 @@
 package com.example.trabajo
 
+import android.util.Log
+import okhttp3.ResponseBody
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
 
 class RestApiService {
-    fun addUser(userData: UserInfo, onResult: (UserInfo?) -> Unit){
+    fun addUser(userData: UserInfo, onResult: (UserResponse?) -> Unit){
         val retrofit = LoginActivity.ServiceBuilder.buildService(RestApi::class.java)
         retrofit.addUser(userData).enqueue(
-            object : Callback<UserInfo> {
-                override fun onFailure(call: Call<UserInfo>, t: Throwable) {
+            object : Callback<UserResponse> {
+                override fun onFailure(call: Call<UserResponse>, t: Throwable) {
                     onResult(null)
                 }
-                override fun onResponse( call: Call<UserInfo>, response: Response<UserInfo>) {
-                    val addedUser = response.body()
-                    onResult(addedUser)
+
+                override fun onResponse(
+                    call: Call<UserResponse>,
+                    response: Response<UserResponse>
+                ) {
+                    onResult(response.body()!!)
+                }
+            }
+        )
+    }
+
+    fun getProducts(userData: tokenGener, onResult: (valor?) -> Unit){
+        val retrofit = LoginActivity.ServiceBuilder.buildService(RestApi::class.java)
+        retrofit.getProducts(userData).enqueue(
+            object : Callback<valor> {
+                override fun onFailure(call: Call<valor>, t: Throwable) {
+                    onResult(null)
+                }
+
+                override fun onResponse(call: Call<valor>, response: Response<valor>) {
+                    onResult(response.body()!!)
                 }
             }
         )

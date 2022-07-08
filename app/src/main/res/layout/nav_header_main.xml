@@ -11,7 +11,8 @@
     android:gravity="bottom"
     android:orientation="vertical"
     android:padding="16dp"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:backgroundTint="#128c7e">
 
     <ImageView
         android:id="@+id/nav_header_imageview"
@@ -25,6 +26,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
         android:text="App Legend"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#ece5dd"/>
 
 </LinearLayout>

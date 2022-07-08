@@ -4,118 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#751fff"
+    android:background="#ece5dd"
     tools:context=".Product1">
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="57dp"
-        android:layout_marginEnd="90dp"
-        android:src="@drawable/microncon"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="MICROCONTROLADOR PIC16F627A-I/P"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:text="$9.163.000"
-        android:textColor="@color/white"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView4" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="365dp"
-        android:layout_height="115dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="87dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="87dp"
-        android:text="El PIC16F627A es un microcontrolador de fácil programación y rápida ejecución de instrucciones de 8 bits basado en CMOS FLASH contando con un oscilador interno de 4 MHz, comparadores, y una referencia de voltaje programable que lo hacen ideal para aplicaciones de nivel analógico o para aplicaciones automotrices, industriales, de electrodomésticos y de consumo."
-        android:textColor="@color/white"
-        android:textSize="12dp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="140dp"
-        android:layout_height="143dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="90dp"
-        android:src="@drawable/microncon2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="342dp"
-        android:layout_marginBottom="342dp"
-        android:text="MICROCONTROLADOR 15F104E SMD SOP-8"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="$2.030,440"
-        android:textColor="@color/white"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="375dp"
-        android:layout_height="143dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="La serie STC15F101E son microcontroladores de un solo chip donde puede ejecutar instrucciones en 1 a 6 ciclos de reloj permitiendo un conjunto de instrucciones que lo hacen compatible con el microcontrolador de la serie 80C51. Este microcontrolador permite la descarga del código por comunicación ISP y también IAP donde permite escribir datos no volátiles en la memoria flash mientras se ejecuta el programa. Adicionalmente cuenta con 8 fuentes de interrupción, oscilador RC de alta precisión y temporizador Watch Dog."
-        android:textColor="@color/white"
-        android:textSize="12dp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -124,6 +14,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:onClick="volver_productos"
+        android:background="@drawable/button_rounded"
         android:src="@android:drawable/ic_menu_revert"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

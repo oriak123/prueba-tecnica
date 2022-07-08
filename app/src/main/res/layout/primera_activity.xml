@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#3C3F4E"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:backgroundTint="#ece5dd">
 
 
     <ProgressBar
@@ -40,57 +41,33 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Usuario"
+        android:text="1075258635"
         android:inputType="textEmailAddress"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:layout_margin="10dp"/>
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:backgroundTint="#128c7e"/>
 
     <EditText
         android:id="@+id/txtPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Contraseña"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         android:ems="10"
+        android:text="testProximate"
         android:inputType="textPassword"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        android:backgroundTint="#128c7e"/>
+
     <Button
         android:onClick="sendPostRequest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Iniciar sesión 2"
-        android:textStyle="bold"
-        android:background="@color/design_default_color_secondary"
-        android:layout_margin="10dp"/>
-
-    <Button
-        android:onClick="login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text="Iniciar sesión"
         android:textStyle="bold"
-        android:background="@color/design_default_color_secondary"
-        android:layout_margin="10dp"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@color/design_default_color_secondary"
-        android:drawableBottom="@color/white"
-        android:onClick="register"
-        android:text="REGISTRARSE"
-        android:textStyle="bold" />
-
-    <TextView
-        android:onClick="forgotPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="¿Olvidaste tú contraseña?"
-        android:textStyle="italic"
-        android:gravity="center"
-        android:textColor="@color/white"
+        android:background="@drawable/button_rounded"
         android:layout_margin="10dp"/>
 
 

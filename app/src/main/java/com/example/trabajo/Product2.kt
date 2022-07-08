@@ -12,7 +12,7 @@ class Product2 : AppCompatActivity() {
     }
     fun volverinicio (view: View){
 
-        startActivity(Intent(this,Productos()::class.java))
+        startActivity(Intent(this,MainActivity()::class.java))
 
     }
 }
