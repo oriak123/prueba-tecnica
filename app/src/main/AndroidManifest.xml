@@ -21,30 +21,6 @@
             android:label="@string/title_activity_image_detail"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".QuejasyReclamos"
-            android:exported="false" />
-        <activity
-            android:name=".Product3"
-            android:exported="false" />
-        <activity
-            android:name=".Product2"
-            android:exported="false" />
-        <activity
-            android:name=".Product1"
-            android:exported="false" />
-        <activity
-            android:name=".Productos"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ForgotPassActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
@@ -53,6 +29,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuejasyReclamos"
+            android:exported="false" />
+        <activity
+            android:name=".RecyclerMain"
+            android:exported="false" />
     </application>
 
 </manifest>

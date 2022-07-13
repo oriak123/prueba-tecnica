@@ -6,7 +6,6 @@ import com.example.trabajo.Product
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_description_product.*
-import kotlinx.android.synthetic.main.activity_description_product.photoView
 
 
 class DescriptionProduct : AppCompatActivity() {
@@ -17,7 +16,7 @@ class DescriptionProduct : AppCompatActivity() {
 
 
         if (intent.extras != null) {
-            Glide.with(this).load(intent.getStringExtra("imageUrl")).into(photoView)
+            Glide.with(this).load(intent.getStringExtra("imageUrl")).into(fotoAmpliada)
 
         }
 

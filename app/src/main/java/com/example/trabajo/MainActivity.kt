@@ -16,13 +16,14 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.trabajo.adapter.listAdapter
 import com.example.trabajo.databinding.AppBarMainBinding
+import com.example.trabajo.databinding.MostarProductosBinding
 import com.example.trabajo.databinding.SegundaActivityBinding
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.recycler.*
 
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener,
-    listAdapter.OnProductClickListener {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener
+    {
 
     private lateinit var binding: SegundaActivityBinding
     private lateinit var drawer: DrawerLayout
@@ -34,23 +35,26 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         binding = SegundaActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val valor = intent.extras!!.getString("token")
 
-        val apiService = RestApiService()
+       // binding.btn.set
+        //val valor = intent.extras!!.getString("token")
 
-        val token = tokenGener(
-            userToken = valor.toString()
+        //val apiService = RestApiService()
 
-        )
+        //val token = tokenGener(
+          //  userToken = valor.toString()
 
-        binding.included.Recycler.layoutManager = LinearLayoutManager(this)
+        //)
 
-        apiService.getProducts(token) {
-            binding.included.Recycler.adapter = it!!.data.products.let { listAdapter(it!!, this) }
-        }
+        //binding.included.Recycler.layoutManager = LinearLayoutManager(this)
+
+        //apiService.getProducts(token) {
+           // Log.d( "hola",it?.data?.products.toString())
+           // binding.included.Recycler.adapter = it!!.data.products.let { listAdapter(it!!, this) }
+       // }
 
 
-        /*val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar_main)
+        val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar_main)
          setSupportActionBar(toolbar)
 
          drawer = findViewById(R.id.drawer_layout)
@@ -62,7 +66,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
              R.string.navigation_drawer_open,
              R.string.navigation_drawer_close
          )
-         drawer.addDrawerListener(toggle)*/
+         drawer.addDrawerListener(toggle)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)
@@ -75,8 +79,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         when (item.itemId) {
             R.id.nav_item_one -> startActivity(Intent(this, MainActivity::class.java))
+            R.id.nav_item_two -> {val intent2 = Intent(this, RecyclerMain::class.java)
+                intent2.putExtra("token", intent.getStringExtra("token"));
+                startActivity(intent2)
+                }
             R.id.nav_item_three -> startActivity(Intent(this, QuejasyReclamos::class.java))
             R.id.nav_item_four -> startActivity(Intent(this, LoginActivity::class.java))
+
 
         }
         drawer.closeDrawer(GravityCompat.START)
@@ -85,12 +94,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
         super.onPostCreate(savedInstanceState)
-        // toggle.syncState()
+         toggle.syncState()
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
-        //toggle.onConfigurationChanged(newConfig)
+        toggle.onConfigurationChanged(newConfig)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -100,7 +109,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return super.onOptionsItemSelected(item)
     }
 
-    override fun onItemClickListener(longDescription: String, image: String) {
+    /*override fun onItemClickListener(longDescription: String, image: String) {
 
         val intent = Intent(this, DescriptionProduct::class.java)
         intent.putExtra("descripUrl", longDescription)
@@ -116,6 +125,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         startActivity(intent)
 
     }
-
+*/
 }
 

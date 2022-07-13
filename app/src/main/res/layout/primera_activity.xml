@@ -61,7 +61,21 @@
         android:layout_margin="10dp"
         android:backgroundTint="#128c7e"/>
 
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:buttonTint="@color/black"
+        android:padding="5dp"
+        android:text="Recordar usuario"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
     <Button
+        android:id="@+id/btnLogin"
         android:onClick="sendPostRequest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
