@@ -22,7 +22,11 @@ class RecyclerMain : AppCompatActivity(), listAdapter.OnProductClickListener {
         binding = AppBarMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val valor:String? = intent.getStringExtra("token")
+        val valor = intent.getStringExtra("token")
+
+        if (valor == null){
+            intent.getStringExtra("token")
+        }
 
         val apiService = RestApiService()
 
@@ -37,78 +41,21 @@ class RecyclerMain : AppCompatActivity(), listAdapter.OnProductClickListener {
         }
     }
 
-    private fun addDummyUser() {
-            //
+    override fun onItemClickListener(longDescription: String, image: String, title:String) {
 
-            // val user: String = txtUser.text.toString()
-            //val password: String = txtPassword.text.toString()
-            //
-            /*if (user!!.isNotEmpty() && password!!.isNotEmpty()) {
-                val checkBox = binding.checkBox
-                if (checkBox.isChecked) {
-                    with(sp.edit()) {
-                        putString("email", user)
-                        putString("clave", password)
-                        putString("active", "true")
-                        putString("remember", "true")
-                        apply()
-                    }
-                } else {
-                    with(sp.edit()) {
-                        putString("active", "true")
-                        putString("remember", "false")
-                        apply()
-                        }
-                    }
-                action("token")
-                    else {
-                        Toast.makeText(this, "Intentalo nuevamente", Toast.LENGTH_SHORT).show()
-                    }
-                }*/
+        val intent = Intent(this, DescriptionProduct::class.java)
+        intent.putExtra("descripUrl", longDescription)
+        intent.putExtra("imageUrl", image)
+        intent.putExtra("titulo",title)
+        startActivity(intent)
 
-            //
-            val apiService = RestApiService()
-            val Usuario = UserInfo(
-                user = "1075258635",
-                password = "testProximate"
-            )
-            apiService.addUser(Usuario) {
-                if (it != null) {
-                    Log.d("hola", it.dataUser.userToken.toString())
-                    action(it.dataUser.userToken)
-                } else {
-                    print("Error registering new user")
-                }
-
-                //if user
-            }
-        }
-
-        fun action(tokenUsuario: String) {
-            val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("token", tokenUsuario);
-            startActivity(intent)
-            finish()
-        }
-    fun volver_productos(view: View) {
-
-        startActivity(Intent(this, MainActivity::class.java))
     }
 
-    override fun onItemClickListener(longDescription: String, image: String) {
-
+    /*override fun onImageClickListener(longDescription: String, image: String) {
         val intent = Intent(this, DescriptionProduct::class.java)
         intent.putExtra("descripUrl", longDescription)
         intent.putExtra("imageUrl", image)
         startActivity(intent)
 
-    }
-
-    override fun onImageClickListener(longDescription: String, image: String) {
-        val intent = Intent(this, DescriptionProduct::class.java)
-        intent.putExtra("descripUrl", longDescription)
-        intent.putExtra("imageUrl", image)
-        startActivity(intent)
-
-    }
+    }*/
 }

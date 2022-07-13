@@ -13,8 +13,8 @@ class listAdapter(
 
     interface OnProductClickListener {
 
-        fun onItemClickListener(longDescription: String, image: String)
-        fun onImageClickListener(longDescription: String, image: String)
+        fun onItemClickListener(longDescription: String, image: String, title: String)
+        //fun onImageClickListener(longDescription: String, image: String)
     }
 
 

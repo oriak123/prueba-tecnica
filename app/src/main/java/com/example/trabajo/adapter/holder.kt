@@ -19,8 +19,8 @@ class listViewHolder(
 
     fun render(itemProducto: Product) {
 
-        itemView.setOnClickListener(){itemClickListener.onItemClickListener(itemProducto.longDescription, image = "")}
-        //itemView.imageProduct.setOnClickListener(){itemClickListener.onImageClickListener(itemProducto.image,"")}
+        itemView.setOnClickListener(){itemClickListener.onItemClickListener(itemProducto.longDescription, itemProducto.image, itemProducto.title)}
+        //itemView.imageProduct.setOnClickListener(){itemClickListener.onImageClickListener(itemProducto.longDescription, image = "")}
         binding.Titulo.text = itemProducto.title
        // Log.d("usuario", itemProducto.image.toString())
         binding.imageProduct.loadUrl(itemProducto.image)

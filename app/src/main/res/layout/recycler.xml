@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="20dp"
-    android:background="#ece5dd">
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/imageProduct"
@@ -18,18 +18,19 @@
     <TextView
         android:id="@+id/Titulo"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:inputType="textCapCharacters"
+        android:gravity="center_horizontal"
         android:textColor="@color/black"
-        android:textSize="17dp"
+        android:textSize="35dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageProduct"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Hola" />
+        tools:text="Hola hola hola hola " />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
