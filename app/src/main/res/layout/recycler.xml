@@ -41,5 +41,4 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Universidad del Rosario " />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>

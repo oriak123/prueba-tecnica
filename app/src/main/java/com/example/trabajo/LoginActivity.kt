@@ -81,6 +81,8 @@ class LoginActivity : AppCompatActivity() {
     //sp: SharedPreferences
     fun addDummyUser() {
 
+        progressBar.visibility = View.VISIBLE
+
         val user: String = txtUser.text.toString()
         val password: String = txtPassword.text.toString()
 
@@ -98,11 +100,8 @@ class LoginActivity : AppCompatActivity() {
 
                 if (usuarioRespuesta != null && usuarioRespuesta.status != false) {
 
-                    progressBar.visibility = View.VISIBLE
 
                     usuarioRespuesta!!.dataUser!!.name?.let { action2(it) }
-
-
 
                     Log.d("hola", binding.checkBox.isChecked.toString())
 
@@ -120,6 +119,7 @@ class LoginActivity : AppCompatActivity() {
                     usuarioRespuesta!!.dataUser!!.userToken?.let { action(it) }
                 }else {
 
+                    progressBar.visibility = View.GONE
                     Toast.makeText(
                         this,
                         "Por favor ingrese los datos correctos",
