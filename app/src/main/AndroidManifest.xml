@@ -7,19 +7,14 @@
 
 
     <application
+        android:name=".GlobalTokenApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="App Legend"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity
-            android:name=".DescriptionProduct"
-            android:exported="false" />
-        <activity
-            android:name=".ImageDetail"
-            android:exported="false"
-            android:theme="@style/NoActionBar" />
+
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -29,12 +24,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".DescriptionProduct"
+            android:exported="false" />
+
+        <activity
+            android:name=".ImageDetail"
+            android:exported="false"
+            android:theme="@style/NoActionBar" />
+
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+
         <activity
             android:name=".QuejasyReclamos"
             android:exported="false" />
+
         <activity
             android:name=".RecyclerMain"
             android:exported="false" />

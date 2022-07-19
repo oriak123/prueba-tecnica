@@ -25,6 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
+        android:textStyle="bold"
         android:text="App Legend"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#ece5dd"/>

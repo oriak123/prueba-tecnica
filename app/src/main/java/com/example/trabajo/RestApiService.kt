@@ -17,8 +17,7 @@ class RestApiService {
                 }
 
                 override fun onResponse(
-                    call: Call<UserResponse>,
-                    response: Response<UserResponse>
+                    call: Call<UserResponse>, response: Response<UserResponse>
                 ) {
                     onResult(response.body()!!)
                 }
@@ -31,7 +30,7 @@ class RestApiService {
         retrofit.getProducts(userData).enqueue(
             object : Callback<valor> {
                 override fun onFailure(call: Call<valor>, t: Throwable) {
-                    onResult(null)
+                    onResult(null) //siletclass (respuestsa)
                 }
 
                 override fun onResponse(call: Call<valor>, response: Response<valor>) {

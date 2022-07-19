@@ -6,11 +6,11 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.trabajo.GlobalTokenApplication.Companion.prefs
 import com.example.trabajo.adapter.listAdapter
 import com.example.trabajo.databinding.AppBarMainBinding
 import kotlinx.android.synthetic.main.recycler.*
 import org.json.JSONObject
-
 
 
 class RecyclerMain : AppCompatActivity(), listAdapter.OnProductClickListener {
@@ -22,11 +22,10 @@ class RecyclerMain : AppCompatActivity(), listAdapter.OnProductClickListener {
         binding = AppBarMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val valor = intent.getStringExtra("token")
 
-        if (valor == null){
-            intent.getStringExtra("token")
-        }
+        Log.d("Otracosa", GlobalTokenApplication.prefs.getToken())
+
+        val valor = prefs.getToken()
 
         val apiService = RestApiService()
 
@@ -37,25 +36,20 @@ class RecyclerMain : AppCompatActivity(), listAdapter.OnProductClickListener {
 
         apiService.getProducts(token) {
             //   Log.d( "hola",it?.data?.products.toString())
-            binding.Recycler.adapter = it!!.data.products.let { listAdapter(it!!, this) }
+            binding.Recycler.adapter =
+                it!!.data.products.let { listAdapter(it!!, this) }// poner try catch
         }
+
+
     }
 
-    override fun onItemClickListener(longDescription: String, image: String, title:String) {
+    override fun onItemClickListener(longDescription: String, image: String, title: String) {
 
         val intent = Intent(this, DescriptionProduct::class.java)
         intent.putExtra("descripUrl", longDescription)
         intent.putExtra("imageUrl", image)
-        intent.putExtra("titulo",title)
+        intent.putExtra("titulo", title)
         startActivity(intent)
 
     }
-
-    /*override fun onImageClickListener(longDescription: String, image: String) {
-        val intent = Intent(this, DescriptionProduct::class.java)
-        intent.putExtra("descripUrl", longDescription)
-        intent.putExtra("imageUrl", image)
-        startActivity(intent)
-
-    }*/
 }

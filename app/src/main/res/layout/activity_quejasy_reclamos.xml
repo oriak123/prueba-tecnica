@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".QuejasyReclamos"
     android:orientation="vertical"
+
     android:background="@color/white">
 
     <ImageView
@@ -23,6 +24,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:layout_marginTop="30dp"
+        android:textSize="18sp"
         android:textColor="@color/black"
         android:gravity="center"
         android:text="Para nosotros es muy importante tu opinión, es por eso que de antemano te pedimos disculpas por cualquier incidente." />
@@ -32,6 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
+        android:textSize="18sp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:layout_marginTop="3dp"
@@ -44,11 +47,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
+        android:textSize="18sp"
         android:textColor="@color/black"
         android:layout_marginTop="3dp"
         android:gravity="center"
-        android:text="Líneas de atención 01-8000-12444 o al 313 333 3333
-                        ¡Estamos contigo ¡
+        android:text="Líneas de atención 01-8000-12444 o al 313 333 3333 ¡Estamos contigo ¡
 " />
 
     <Button
