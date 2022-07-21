@@ -20,12 +20,9 @@ class listViewHolder(
     fun render(itemProducto: Product) {
 
         itemView.setOnClickListener(){itemClickListener.onItemClickListener(itemProducto.longDescription, itemProducto.image, itemProducto.title)}
-        //itemView.imageProduct.setOnClickListener(){itemClickListener.onImageClickListener(itemProducto.longDescription, image = "")}
         binding.Titulo.text = itemProducto.title
-       // Log.d("usuario", itemProducto.image.toString())
         binding.imageProduct.loadUrl(itemProducto.image)
-        Glide.with(binding.imageProduct).load(itemProducto.image).centerCrop()
-            .error(R.drawable.microncon).into(binding.imageProduct)
+        Glide.with(binding.imageProduct).load(itemProducto.image).centerCrop().error(R.drawable.microncon).into(binding.imageProduct)
     }
 
     fun ImageView.loadUrl(url: String) {
