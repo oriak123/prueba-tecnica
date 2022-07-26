@@ -9,7 +9,6 @@ data class UserResponse(
     val _data: String?="",
     val message: String,
     val status: Boolean,
-    val Convert: String,
 
     ){
     val dataUser: DataUser?

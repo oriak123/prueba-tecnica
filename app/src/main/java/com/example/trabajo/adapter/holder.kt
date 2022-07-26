@@ -1,6 +1,5 @@
 package com.example.trabajo.adapter
 
-import android.util.Log
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import coil.ImageLoader
@@ -10,7 +9,6 @@ import com.bumptech.glide.Glide
 import com.example.trabajo.Product
 import com.example.trabajo.R
 import com.example.trabajo.databinding.RecyclerBinding
-import kotlinx.android.synthetic.main.recycler.view.*
 
 class listViewHolder(
     private val binding: RecyclerBinding,
@@ -20,7 +18,7 @@ class listViewHolder(
     fun render(itemProducto: Product) {
 
         itemView.setOnClickListener(){itemClickListener.onItemClickListener(itemProducto.longDescription, itemProducto.image, itemProducto.title)}
-        binding.Titulo.text = itemProducto.title
+        binding.Titulo.text = itemProducto.title.toUpperCase()
         binding.imageProduct.loadUrl(itemProducto.image)
         Glide.with(binding.imageProduct).load(itemProducto.image).centerCrop().error(R.drawable.microncon).into(binding.imageProduct)
     }
@@ -36,7 +34,7 @@ class listViewHolder(
         val request = ImageRequest.Builder(this.context)
             .crossfade(true)
             .crossfade(200)
-            .data(url).error(R.drawable.biome2)
+            .data(url).error(R.drawable.microncon)
             .target(this)
             .build()
 

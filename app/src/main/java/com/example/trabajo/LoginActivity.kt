@@ -30,21 +30,23 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = PrimeraActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         txtUser = findViewById(R.id.txtUser)
         txtPassword = findViewById(R.id.txtPassword)
         progressBar = findViewById(R.id.progressBar)
 
-      //  val sp = getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
-
         binding.btnLogin.setOnClickListener { addDummyUser() }
 
-        revisarLogin()
+
+        autocompletarUsuario()
         credencial()
-}
+    }
 
     private fun credencial() {
-        Log.d("123",prefs.getUser().toString())
-        if ((prefs.getUser().isNotEmpty() && prefs.getPassw().isNotEmpty() )&& prefs.getToken().isNotEmpty()){
+        Log.d("123", prefs.getUser().toString())
+        if ((prefs.getUser().isNotEmpty() && prefs.getPassw().isNotEmpty()) && prefs.getToken()
+                .isNotEmpty()
+        ) {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
@@ -52,7 +54,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
-    private fun revisarLogin() {
+    private fun autocompletarUsuario() {
 
         val usuario = prefs.getUser()
         val contraseña = prefs.getPassw()
@@ -74,11 +76,11 @@ class LoginActivity : AppCompatActivity() {
             .client(client)
             .build()
 
-        fun <T> buildService(service: Class<T>): T {
-            return retrofit.create(service)
+        fun <T> buildService(service: Class<T>): T { // clase generica
+            return retrofit.create(service)  // retrofit por defecto nos pide interfaz en el metodo create, y esa interfaz es Apiservice
         }
     }
-    //sp: SharedPreferences
+
     fun addDummyUser() {
 
         progressBar.visibility = View.VISIBLE
@@ -104,35 +106,23 @@ class LoginActivity : AppCompatActivity() {
                     usuarioRespuesta!!.dataUser!!.name?.let { action2(it) }
 
                     Log.d("hola", binding.checkBox.isChecked.toString())
-
                     prefs.saveGuardado(binding.checkBox.isChecked)
-
                     prefs.saveUser(binding.txtUser.text.toString())
-
                     prefs.savePassw(binding.txtPassword.text.toString())
 
-
-                   /* with(sp.edit()) {
-                        putString("active", "true")
-                        apply()
-                    }*/
                     usuarioRespuesta!!.dataUser!!.userToken?.let { action(it) }
-                }else {
+                } else {
 
                     progressBar.visibility = View.GONE
                     Toast.makeText(
-                        this,
-                        "Por favor ingrese los datos correctos",
-                        Toast.LENGTH_SHORT
+                        this, "Por favor ingrese los datos correctos", Toast.LENGTH_SHORT
                     ).show()
                 }
             }
         } else {
 
             Toast.makeText(
-                this,
-                "Por favor ingrese los datos correctos",
-                Toast.LENGTH_SHORT
+                this, "Por favor ingrese los datos correctos", Toast.LENGTH_SHORT
             ).show()
         }
     }
@@ -146,7 +136,8 @@ class LoginActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
-    private fun action2(saludo:String){
+
+    private fun action2(saludo: String) {
         prefs.saveSaludo(saludo)
         Log.d("OtroName", prefs.getSaludo())
     }

@@ -1,13 +1,10 @@
 package com.example.trabajo
 
-import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
-import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -15,7 +12,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.example.trabajo.GlobalTokenApplication.Companion.prefs
 import com.example.trabajo.databinding.SegundaActivityBinding
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.activity_description_product.*
 import kotlinx.android.synthetic.main.mostar_productos.*
 
 
@@ -31,7 +27,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding = SegundaActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Log.d("Otracosa", GlobalTokenApplication.prefs.getToken())
 
         val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar_main)
         setSupportActionBar(toolbar)
@@ -61,7 +56,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun ponerSaludo (){
         val traerName = prefs.getSaludo()
-        textView2.text = "!BIENVENIDO A APP LEGEND $traerName!"
+        textView2.text = "!BIENVENIDO A APP LEGEND ${traerName.toUpperCase() }!"
         }
 
 
@@ -80,17 +75,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(intent2)
             }
 
-
             R.id.nav_item_three -> {
                 startActivity(Intent(this, QuejasyReclamos::class.java))
             }
 
             R.id.nav_item_four -> {
-                val sp = getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
-                with(sp.edit()) {
-                    putBoolean("active", false)
-                    apply()
-                }
                 Log.d("ole",prefs.getGuardado().toString())
                 if(!prefs.getGuardado()){
                     prefs.saveUser("")
@@ -101,6 +90,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 }
                 val intent2 = Intent(this, LoginActivity::class.java)
                 startActivity(intent2)
+            }
+            R.id.nav_item_five-> {
+                startActivity(Intent(this, WebView::class.java))
             }
         }
 
@@ -119,9 +111,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        /* if (toggle.onOptionsItemSelected(item)) {
+         if (toggle.onOptionsItemSelected(item)) {
              return true
-         }*/
+         }
         return super.onOptionsItemSelected(item)
     }
 }

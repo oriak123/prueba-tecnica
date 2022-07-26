@@ -3,14 +3,11 @@ package com.example.trabajo
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.trabajo.GlobalTokenApplication.Companion.prefs
 import com.example.trabajo.adapter.listAdapter
 import com.example.trabajo.databinding.AppBarMainBinding
-import kotlinx.android.synthetic.main.recycler.*
-import org.json.JSONObject
 
 
 class RecyclerMain : AppCompatActivity(), listAdapter.OnProductClickListener {
@@ -48,7 +45,7 @@ class RecyclerMain : AppCompatActivity(), listAdapter.OnProductClickListener {
         val intent = Intent(this, DescriptionProduct::class.java)
         intent.putExtra("descripUrl", longDescription)
         intent.putExtra("imageUrl", image)
-        intent.putExtra("titulo", title)
+        intent.putExtra("titulo", title.toUpperCase())
         startActivity(intent)
 
     }

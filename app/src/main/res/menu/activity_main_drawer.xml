@@ -13,9 +13,13 @@
     </group>
     <item android:title="Otros">
         <menu>
+            <item android:id="@+id/nav_item_five"
+            android:icon="@drawable/rombo"
+            android:title="!Conocenos!" />
+
             <item android:id="@+id/nav_item_four"
                 android:icon="@drawable/rombo"
-                android:title="Cerrar sesión "/>
+                android:title="Cerrar sesión"/>
         </menu>
     </item>
 </menu>

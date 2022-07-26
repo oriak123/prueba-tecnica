@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-
     <application
         android:name=".GlobalTokenApplication"
         android:allowBackup="true"
@@ -14,7 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".WebView"
+            android:exported="true"></activity>
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -24,24 +28,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".DescriptionProduct"
             android:exported="false" />
-
         <activity
             android:name=".ImageDetail"
             android:exported="false"
             android:theme="@style/NoActionBar" />
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
         <activity
             android:name=".QuejasyReclamos"
             android:exported="false" />
-
         <activity
             android:name=".RecyclerMain"
             android:exported="false" />

@@ -1,13 +1,11 @@
 package com.example.trabajo
 
-import android.util.Log
-import okhttp3.ResponseBody
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class RestApiService {
+
     fun addUser(userData: UserInfo, onResult: (UserResponse?) -> Unit){
         val retrofit = LoginActivity.ServiceBuilder.buildService(RestApi::class.java)
         retrofit.addUser(userData).enqueue(
@@ -16,9 +14,7 @@ class RestApiService {
                     onResult(null)
                 }
 
-                override fun onResponse(
-                    call: Call<UserResponse>, response: Response<UserResponse>
-                ) {
+                override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
                     onResult(response.body()!!)
                 }
             }

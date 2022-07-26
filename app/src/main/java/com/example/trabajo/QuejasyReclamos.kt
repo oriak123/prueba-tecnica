@@ -1,11 +1,9 @@
 package com.example.trabajo
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.trabajo.adapter.listAdapter
+import androidx.appcompat.app.AppCompatActivity
 import com.example.trabajo.databinding.ActivityQuejasyReclamosBinding
 
 class QuejasyReclamos : AppCompatActivity() {
